@@ -1,11 +1,21 @@
+require('dotenv').config()
+require("@nomiclabs/hardhat-ethers");
+
+require('dotenv').config({ debug: true })
+
+ethers = require('ethers')
+const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL
+const MNEMONIC = process.env.MNEMONIC
+const PRIVATE_KEY = ethers.Wallet.fromMnemonic(MNEMONIC);
+
 module.exports = {
-  defaultNetwork: "rinkeby",
+  defaultNetwork: "kovan",
   networks: {
     hardhat: {
     },
     kovan: {
-      url: "https://eth-rinkeby.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
-      accounts: [privateKey1, privateKey2, ...]
+      url: KOVAN_RPC_URL,
+      accounts: [] //[PRIVATE_KEY.address]
     }
   },
   solidity: {
