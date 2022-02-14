@@ -1,21 +1,24 @@
-require('dotenv').config()
+require('dotenv').config();
 require("@nomiclabs/hardhat-ethers");
+require('./tasks/MyContractTasks.js');
 
-require('dotenv').config({ debug: true })
-
-ethers = require('ethers')
+// require('dotenv').config({ debug: true })
+//ethers = require('ethers')
 const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL
 const MNEMONIC = process.env.MNEMONIC
-const PRIVATE_KEY = ethers.Wallet.fromMnemonic(MNEMONIC);
+//const PRIVATE_KEY = ethers.Wallet.fromMnemonic(MNEMONIC);
 
 module.exports = {
-  defaultNetwork: "kovan",
+  defaultNetwork: "kovan", //'hardhat'
   networks: {
     hardhat: {
     },
     kovan: {
       url: KOVAN_RPC_URL,
-      accounts: [] //[PRIVATE_KEY.address]
+      //accounts: [PRIVATE_KEY.address]
+      accounts: {
+        mnemonic: MNEMONIC
+      }
     }
   },
   solidity: {

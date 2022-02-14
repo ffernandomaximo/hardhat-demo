@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/fernandomaximof/Documents/hardhat-demo/contracts/MyFirstContract.sol": {
-      "lastModificationDate": 1644757904654,
+      "lastModificationDate": 1644803532475,
       "contentHash": "56b0cdd35de3e7833e89c04ddc76ccb5",
       "sourceName": "contracts/MyFirstContract.sol",
       "solcConfig": {
