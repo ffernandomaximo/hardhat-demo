@@ -1,4 +1,5 @@
 **Hardhat Development Environment**
+Easily deploy your contracts, run tests and debug Solidity code without dealing with live environments. Hardhat Network is a local Ethereum network designed for development.
 
 1. Installing Hardhat:
 ```npm install --save-dev hardhat```
